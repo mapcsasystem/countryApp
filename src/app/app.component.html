@@ -1,1 +1,41 @@
-<h1></h1>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>
+      Países
+    </mat-toolbar>
+    <hr>
+    <mat-nav-list>
+      <div *ngIf="(isHandset$ | async);else noToggle">
+        <!-- <a mat-list-item routerLink="home" routerLinkActive="active" (click)="drawer.toggle()">Home Page</a>
+        <a mat-list-item routerLink="about" routerLinkActive="active" (click)="drawer.toggle()">About Page</a>
+        <a mat-list-item routerLink="contact" routerLinkActive="active" (click)="drawer.toggle()">Contact Page</a> -->
+        <a mat-list-item routerLink="countries/by-capital" routerLinkActive="active" (click)="drawer.toggle()">Por
+          Capital</a>
+        <a mat-list-item routerLink="countries/by-country" routerLinkActive="active" (click)="drawer.toggle()">Por
+          pàís</a>
+        <a mat-list-item routerLink="countries/by-region" routerLinkActive="active" (click)="drawer.toggle()">Por
+          region</a>
+      </div>
+      <ng-template #noToggle>
+        <!-- <a mat-list-item routerLink="home" routerLinkActive="active">Home Page</a>
+        <a mat-list-item routerLink="about" routerLinkActive="active">About Page</a>
+        <a mat-list-item routerLink="contact" routerLinkActive="active">Contact Page</a> -->
+        <a mat-list-item routerLink="countries/by-capital" routerLinkActive="active">Por Capital</a>
+        <a mat-list-item routerLink="countries/by-country" routerLinkActive="active">Por pàís</a>
+        <a mat-list-item routerLink="countries/by-region" routerLinkActive="active">Por region</a>
+      </ng-template>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>Country App</span>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
