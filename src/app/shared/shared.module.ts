@@ -4,8 +4,8 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MaterialModule } from '../shared/material/material.module';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
+import { MaterialModule } from '../material/material.module';
 
 @NgModule({
   declarations: [HomePageComponent, AboutPageComponent, ContactPageComponent],
@@ -17,4 +17,4 @@ import { ContactPageComponent } from './pages/contact-page/contact-page.componen
   ],
   exports: [HomePageComponent, AboutPageComponent, ContactPageComponent],
 })
-export class CoreModule {}
+export class SharedModule {}

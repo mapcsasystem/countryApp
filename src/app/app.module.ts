@@ -7,8 +7,8 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 
-import { MaterialModule } from './shared/material/material.module';
-import { CoreModule } from './core/core.module';
+import { MaterialModule } from './material/material.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,10 +16,10 @@ import { CoreModule } from './core/core.module';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    CoreModule,
     HttpClientModule,
     ReactiveFormsModule,
     MaterialModule,
+    SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

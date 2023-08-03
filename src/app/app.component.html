@@ -7,6 +7,7 @@
     <hr>
     <mat-nav-list>
       <div *ngIf="(isHandset$ | async);else noToggle">
+        <!-- //! Demostracion de router -->
         <!-- <a mat-list-item routerLink="home" routerLinkActive="active" (click)="drawer.toggle()">Home Page</a>
         <a mat-list-item routerLink="about" routerLinkActive="active" (click)="drawer.toggle()">About Page</a>
         <a mat-list-item routerLink="contact" routerLinkActive="active" (click)="drawer.toggle()">Contact Page</a> -->
@@ -18,6 +19,7 @@
           region</a>
       </div>
       <ng-template #noToggle>
+        <!-- //! Demostracion de router -->
         <!-- <a mat-list-item routerLink="home" routerLinkActive="active">Home Page</a>
         <a mat-list-item routerLink="about" routerLinkActive="active">About Page</a>
         <a mat-list-item routerLink="contact" routerLinkActive="active">Contact Page</a> -->
