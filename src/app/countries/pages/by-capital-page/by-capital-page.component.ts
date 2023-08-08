@@ -1,10 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { CountriesService } from '../../services/countries.service';
 import { ICountry } from '../../interfaces/country.interface';
-import {
-  MatTableDataSource,
-  MatTableDataSourcePaginator,
-} from '@angular/material/table';
 
 @Component({
   selector: 'by-capital',
@@ -15,10 +11,10 @@ export class ByCapitalPageComponent {
   private countriesService = inject(CountriesService);
   countries: ICountry[] = [];
   term = '';
-  seachByCapital(term: string): void {
-    this.countriesService.searchByCapital(term).subscribe((countries) => {
+  seachByCapital(capital: string): void {
+    this.countriesService.searchByCapital(capital).subscribe((countries) => {
       this.countries = [...countries];
-      this.term = term;
+      this.term = capital;
     });
   }
 }

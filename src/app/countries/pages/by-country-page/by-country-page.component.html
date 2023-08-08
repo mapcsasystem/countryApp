@@ -2,4 +2,5 @@
     Por País
 </h2>
 <hr>
-<!-- <shared-search-box [placeholder]="'Buscar por país...'" /> -->
+<shared-search-box [placeholder]="'Buscar por país...'" (onValue)="searchByCountry($event)" />
+<countries-table [countries]="countries" [term]="term"></countries-table>

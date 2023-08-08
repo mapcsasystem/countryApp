@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { DEFAULT_CURRENCY_CODE, LOCALE_ID, NgModule } from '@angular/core';
+import { CommonModule, registerLocaleData } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CountriesRoutingModule } from './countries-routing.module';
@@ -9,6 +9,11 @@ import { ByRegionPageComponent } from './pages/by-region-page/by-region-page.com
 import { CountryPageComponent } from './pages/country-page/country-page.component';
 import { MaterialModule } from '../material/material.module';
 import { SharedModule } from '../shared/shared.module';
+import { CountryTableComponent } from './components/country-table/country-table.component';
+import LocaleEs from '@angular/common/locales/es-MX';
+import { MAT_DATE_LOCALE } from '@angular/material/core';
+
+registerLocaleData(LocaleEs, 'es-MX');
 
 @NgModule({
   declarations: [
@@ -16,6 +21,7 @@ import { SharedModule } from '../shared/shared.module';
     ByCountryPageComponent,
     ByRegionPageComponent,
     CountryPageComponent,
+    CountryTableComponent,
   ],
   imports: [
     CommonModule,
@@ -24,6 +30,11 @@ import { SharedModule } from '../shared/shared.module';
     ReactiveFormsModule,
     MaterialModule,
     SharedModule,
+  ],
+  providers: [
+    { provide: MAT_DATE_LOCALE, useValue: 'es-MX' },
+    { provide: LOCALE_ID, useValue: 'es-MX' },
+    { provide: DEFAULT_CURRENCY_CODE, useValue: 'MXN' },
   ],
 })
 export class CountriesModule {}

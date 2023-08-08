@@ -8,9 +8,6 @@
     <mat-nav-list>
       <div *ngIf="(isHandset$ | async);else noToggle">
         <!-- //! Demostracion de router -->
-        <!-- <a mat-list-item routerLink="home" routerLinkActive="active" (click)="drawer.toggle()">Home Page</a>
-        <a mat-list-item routerLink="about" routerLinkActive="active" (click)="drawer.toggle()">About Page</a>
-        <a mat-list-item routerLink="contact" routerLinkActive="active" (click)="drawer.toggle()">Contact Page</a> -->
         <a mat-list-item routerLink="countries/by-capital" routerLinkActive="active" (click)="drawer.toggle()">
           Por Capital
         </a>
@@ -23,11 +20,8 @@
       </div>
       <ng-template #noToggle>
         <!-- //! Demostracion de router -->
-        <!-- <a mat-list-item routerLink="home" routerLinkActive="active">Home Page</a>
-        <a mat-list-item routerLink="about" routerLinkActive="active">About Page</a>
-        <a mat-list-item routerLink="contact" routerLinkActive="active">Contact Page</a> -->
         <a mat-list-item routerLink="countries/by-capital" routerLinkActive="active">Por Capital</a>
-        <a mat-list-item routerLink="countries/by-country" routerLinkActive="active">Por Pàís</a>
+        <a mat-list-item routerLink="countries/by-country" routerLinkActive="active">Por País</a>
         <a mat-list-item routerLink="countries/by-region" routerLinkActive="active">Por Región</a>
       </ng-template>
     </mat-nav-list>

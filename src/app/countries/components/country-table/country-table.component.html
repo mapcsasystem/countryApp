@@ -1,0 +1,68 @@
+<mat-card class="mat-elevation-z0">
+    <mat-card-content class="mat-elevation-z8 displayBlock">
+
+        <table mat-table [dataSource]="dataSource" matSort>
+            <ng-container matColumnDef="#">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header style="font-size: 12px;">#</th>
+                <td mat-cell *matCellDef="let row;let i = index;"
+                    [style]="'font-size: 10px;background-color:'+row.color+';color:black'">
+                    {{i+1}}
+                </td>
+            </ng-container>
+
+            <ng-container matColumnDef="icon">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header style="font-size: 12px;">ICON</th>
+                <td mat-cell *matCellDef="let row;let i = index;"
+                    [style]="'font-size: 10px;background-color:'+row.color+';color:black'">
+                    {{row.flag}}
+                </td>
+            </ng-container>
+
+            <ng-container matColumnDef="flag">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header style="font-size: 12px;">BANDERA</th>
+                <td mat-cell *matCellDef="let row;let i = index;"
+                    [style]="'font-size: 10px;background-color:'+row.color+';color:black'">
+                    <img [src]="row.flags.svg" [alt]="row.name.common" width="25">
+                </td>
+            </ng-container>
+
+            <ng-container matColumnDef="country">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header style="font-size: 12px;">PAÍS</th>
+                <td mat-cell *matCellDef="let row;let i = index;"
+                    [style]="'font-size: 10px;background-color:'+row.color+';color:black'">
+                    {{row.name.common }}
+                </td>
+            </ng-container>
+
+            <ng-container matColumnDef="population">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header style="font-size: 12px;">POBLACIÓN</th>
+                <td mat-cell *matCellDef="let row;let i = index;"
+                    [style]="'font-size: 10px;background-color:'+row.color+';color:black'">
+                    {{row.population | number}}
+                </td>
+            </ng-container>
+
+
+
+            <ng-container matColumnDef="capital" stickyEnd>
+                <th mat-header-cell *matHeaderCellDef mat-sort-header style="font-size: 12px;">CAPITAL</th>
+                <td mat-cell *matCellDef="let row" [style]="'font-size: 10px;'">
+                    {{ row.capital }}
+                </td>
+
+            </ng-container>
+
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="clickedRows(row)"></tr>
+            <tr class="mat-row" *matNoDataRow>
+                <td class="mat-cell" colspan="4">No hay datos países con "{{term}}"</td>
+            </tr>
+        </table>
+
+    </mat-card-content>
+    <!-- <mat-card-actions align="end"> -->
+    <mat-paginator class="mat-elevation-z8" [pageSizeOptions]="[5, 10, 25]" aria-label="Select page of users"
+        #paginator></mat-paginator>
+    <!-- </mat-card-actions> -->
+</mat-card>
