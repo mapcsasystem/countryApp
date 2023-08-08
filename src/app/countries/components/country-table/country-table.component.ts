@@ -26,7 +26,15 @@ export class CountryTableComponent implements OnInit, OnChanges {
   @ViewChild(MatSort) sort!: MatSort;
 
   dataSource!: MatTableDataSource<ICountry, MatTableDataSourcePaginator>;
-  displayedColumns = ['#', 'icon', 'flag', 'country', 'population', 'capital'];
+  displayedColumns = [
+    '#',
+    'icon',
+    'flag',
+    'country',
+    'population',
+    'capital',
+    'actions',
+  ];
   ngOnInit(): void {
     this.addCountries();
   }

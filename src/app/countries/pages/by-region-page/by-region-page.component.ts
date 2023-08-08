@@ -8,11 +8,11 @@ import { ICountry } from '../../interfaces/country.interface';
   styleUrls: ['./by-region-page.component.scss'],
 })
 export class ByRegionPageComponent {
-  private countriesService = inject(CountriesService);
+  private readonly _countriesService = inject(CountriesService);
   countries: ICountry[] = [];
   term = '';
   seachByRegion(region: string): void {
-    this.countriesService.searchByRegion(region).subscribe((countries) => {
+    this._countriesService.searchByRegion(region).subscribe((countries) => {
       this.countries = [...countries];
       this.term = region;
     });

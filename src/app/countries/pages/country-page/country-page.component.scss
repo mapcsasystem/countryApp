@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.loading {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.card {
+  max-width: 400px;
+}
+
+.header-image {
+  background-size: cover;
+}
+.box.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.chip .cdk-drop-list-dragging {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}

@@ -15,7 +15,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatCardModule } from '@angular/material/card';
 // import { MatCheckboxModule } from '@angular/material/checkbox';
-// import { MatChipsModule } from '@angular/material/chips';
+import { MatChipsModule } from '@angular/material/chips';
 // import { MatStepperModule } from '@angular/material/stepper';
 // import { MatDatepickerModule } from '@angular/material/datepicker';
 // import { MatDialogModule } from '@angular/material/dialog';
@@ -29,7 +29,7 @@ import { MatListModule } from '@angular/material/list';
 // import { MatNativeDateModule, MatRippleModule } from '@angular/material/core';
 import { MatPaginatorModule } from '@angular/material/paginator';
 // import { MatProgressBarModule } from '@angular/material/progress-bar';
-// import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 // import { MatRadioModule } from '@angular/material/radio';
 // import { MatSelectModule } from '@angular/material/select';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -63,7 +63,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatButtonToggleModule,
     MatCardModule,
     // MatCheckboxModule,
-    // MatChipsModule,
+    MatChipsModule,
     // MatStepperModule,
     // MatDatepickerModule,
     // MatDialogModule,
@@ -77,7 +77,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     // MatNativeDateModule,
     MatPaginatorModule,
     // MatProgressBarModule,
-    // MatProgressSpinnerModule,
+    MatProgressSpinnerModule,
     // MatRadioModule,
     // MatRippleModule,
     // MatSelectModule,

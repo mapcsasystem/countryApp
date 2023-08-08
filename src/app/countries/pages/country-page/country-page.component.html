@@ -1,1 +1,35 @@
-<p>country-page works!</p>
+<div class="container" *ngIf="country;else loading">
+    <mat-card class="card">
+        <mat-card-header>
+            <div mat-card-avatar class="header-image" [style]="url">
+            </div>
+            <mat-card-title>{{country.name.common}}</mat-card-title>
+            <mat-card-subtitle>{{country.capital}}</mat-card-subtitle>
+        </mat-card-header>
+        <div>
+            <img mat-card-image [src]="country.flags.png" [alt]="country.name.common">
+        </div>
+        <mat-card-content>
+            <mat-list role="list">
+                <mat-list-item role="listitem">Poblacion: {{country.population | number}}</mat-list-item>
+                <mat-list-item role="listitem">Código: {{country.cca3}}</mat-list-item>
+            </mat-list>
+            <mat-card-subtitle>Traducciónes Idiomas</mat-card-subtitle>
+            <mat-chip-set>
+                <mat-chip class="box" *ngFor="let t of translations">
+                    {{t.common}}
+                </mat-chip>
+            </mat-chip-set>
+        </mat-card-content>
+
+        <mat-card-actions align="end">
+            <button mat-button (click)="goReturn()">Regresar</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
+
+<ng-template #loading>
+    <div class="loading">
+        <mat-spinner></mat-spinner>
+    </div>
+</ng-template>

@@ -8,11 +8,11 @@ import { ICountry } from '../../interfaces/country.interface';
   styleUrls: ['./by-country-page.component.scss'],
 })
 export class ByCountryPageComponent {
-  private countriesService = inject(CountriesService);
+  private readonly _countriesService = inject(CountriesService);
   countries: ICountry[] = [];
   term = '';
   searchByCountry(country: string): void {
-    this.countriesService.searchByCountry(country).subscribe((countries) => {
+    this._countriesService.searchByCountry(country).subscribe((countries) => {
       this.countries = [...countries];
       this.term = country;
     });
