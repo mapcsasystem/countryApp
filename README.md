@@ -6,9 +6,11 @@ El Buscador de Paises en Angular es una página web interactiva que utiliza el p
 
 ### Tecnologías utilizadas
 
-#### Angular [Angular CLI](https://github.com/angular/angular-cli) version 16.1.6.
+#### Angular [Angular CLI](https://github.com/angular/angular-cli) version 16.1.7.
 
 #### Angular Material [Angular Material ](https://material.angular.io/) version 16.1.7.
+
+#### Prime Flex [Prime Flex](https://www.primefaces.org/primeflex/)
 
 #### NodeJS [Node](https://nodejs.org/dist/v18.16.0/) version 18.16.0.
 

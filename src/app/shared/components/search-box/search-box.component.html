@@ -1,7 +1,16 @@
-<div class="w-full flex flex-row">
+<!-- <div class="w-full flex flex-row">
     <mat-form-field appearance="outline" class="w-full">
         <mat-label>Buscar</mat-label>
         <input matInput [placeholder]="placeholder" (keyup.enter)="emmitValue(txtInput.value)" #txtInput>
+        <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+</div> -->
+
+<div class="w-full flex flex-row">
+    <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Buscar</mat-label>
+        <input matInput [placeholder]="placeholder" (keyup)="onkeyPress(txtInput.value)" #txtInput
+            [value]="initialValue">
         <mat-icon matSuffix>search</mat-icon>
     </mat-form-field>
 </div>
