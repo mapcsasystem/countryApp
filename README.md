@@ -2,7 +2,7 @@
 
 ### Descripción:
 
-El Buscador de Paises en Angular es una página web interactiva que utiliza el popular framework Angular para permitir a los usuarios buscar y descubrir países de manera rápida y sencilla. La aplicación utiliza la API de un servicio de terceros [Rest Countries](https://restcountries.com/#endpoints-code) para obtener una amplia selección de GIFs actualizados en tiempo real.
+El Buscador de Paises en Angular es una página web interactiva que utiliza el popular framework Angular para permitir a los usuarios buscar y descubrir países de manera rápida y sencilla. La aplicación utiliza la API de un servicio de terceros [Rest Countries](https://restcountries.com/#endpoints-code) para obtener una amplia selección de Paises actualizados.
 
 ### Tecnologías utilizadas
 
@@ -39,8 +39,8 @@ sudo npm i -g @angular/cli
 ### Comandos a utilizar
 
 ```
-git clone https://github.com/mapcsasystem/GifsApp.git
-cd GifsApp
+git clone https://github.com/mapcsasystem/countryApp.git
+cd countryApp
 npm install
 npm start
 ```
