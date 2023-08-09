@@ -49,13 +49,13 @@ npm install
 npm start
 ```
 
-### Comandos a utilizar
+#### Pagina web de la app [Web](https://mapcsasystem.github.io/countryApp/)
 
-#### Pagina web de la app [GitHub-Pages](https://pages.github.com/)
-
-El diseño web no es repositive
+El diseño web repositive
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.7.
+
+https://mapcsasystem.github.io/countryApp/
 
 ## Development server
 
