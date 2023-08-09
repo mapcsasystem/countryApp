@@ -21,7 +21,6 @@ import { MatSort } from '@angular/material/sort';
 })
 export class CountryTableComponent implements OnInit, OnChanges {
   @Input({ required: true }) countries: ICountry[] = [];
-  @Input() term!: string;
   @ViewChild(MatPaginator, { static: true }) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 

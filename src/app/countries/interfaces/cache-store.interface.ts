@@ -8,5 +8,5 @@ export interface ICacheStore {
 
 export interface ITermCountries {
   term: string;
-  coutries: ICountry[];
+  countries: ICountry[];
 }

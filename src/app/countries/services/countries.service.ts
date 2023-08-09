@@ -13,38 +13,52 @@ export class CountriesService {
   cacheStore: ICacheStore = {
     byCapital: {
       term: '',
-      coutries: [],
+      countries: [],
     },
     byCoutries: {
       term: '',
-      coutries: [],
+      countries: [],
     },
     byRegion: {
       term: '',
-      coutries: [],
+      countries: [],
     },
   };
 
   searchByCapital(term: string): Observable<ICountry[]> {
     const url = `${this._apiUrl}/capital/${term}`;
     return this._getCountiesRequest(url).pipe(
-      tap((coutries) => {
+      tap((countries) => {
         this.cacheStore.byCapital = {
           term,
-          coutries,
+          countries,
         };
       })
     );
   }
 
-  searchByCountry(name: string): Observable<ICountry[]> {
-    const url = `${this._apiUrl}/name/${name}`;
-    return this._getCountiesRequest(url);
+  searchByCountry(term: string): Observable<ICountry[]> {
+    const url = `${this._apiUrl}/name/${term}`;
+    return this._getCountiesRequest(url).pipe(
+      tap((countries) => {
+        this.cacheStore.byCoutries = {
+          term,
+          countries,
+        };
+      })
+    );
   }
 
-  searchByRegion(region: string): Observable<ICountry[]> {
-    const url = `${this._apiUrl}/region/${region}`;
-    return this._getCountiesRequest(url);
+  searchByRegion(term: string): Observable<ICountry[]> {
+    const url = `${this._apiUrl}/region/${term}`;
+    return this._getCountiesRequest(url).pipe(
+      tap((countries) => {
+        this.cacheStore.byRegion = {
+          term,
+          countries,
+        };
+      })
+    );
   }
 
   searchCoutryByAlphaCode(code: string): Observable<ICountry | null> {

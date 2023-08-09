@@ -11,9 +11,9 @@ export class ByCapitalPageComponent implements OnInit {
   private readonly _countriesService = inject(CountriesService);
   countries: ICountry[] = [];
   initialValue = '';
-  term = '';
+
   ngOnInit(): void {
-    this.countries = this._countriesService.cacheStore.byCapital.coutries;
+    this.countries = this._countriesService.cacheStore.byCapital.countries;
     this.initialValue = this._countriesService.cacheStore.byCapital.term;
   }
 
