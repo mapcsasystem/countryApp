@@ -1,4 +1,4 @@
-# Buscador de paIses
+# Buscador de países
 
 ### Descripción:
 
