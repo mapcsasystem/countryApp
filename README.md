@@ -14,7 +14,7 @@ El Buscador de Paises en Angular es una página web interactiva que utiliza el p
 
 #### NPM [NPM](https://github.com/npm) version 9.8.1.
 
-#### Git [GIT](https://github.com/npm) version 2.41.0.
+#### Git [GIT](https://git-scm.com/) version 2.41.0.
 
 #### GitHub [GitHub](https://github.com/)
 
