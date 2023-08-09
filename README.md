@@ -1,4 +1,59 @@
-# CountryApp
+# Buscador de paIses
+
+### Descripción:
+
+El Buscador de Paises en Angular es una página web interactiva que utiliza el popular framework Angular para permitir a los usuarios buscar y descubrir países de manera rápida y sencilla. La aplicación utiliza la API de un servicio de terceros [Rest Countries](https://restcountries.com/#endpoints-code) para obtener una amplia selección de GIFs actualizados en tiempo real.
+
+### Tecnologías utilizadas
+
+#### Angular [Angular CLI](https://github.com/angular/angular-cli) version 16.1.6.
+
+#### Angular Material [Angular Material ](https://github.com/twbs) version 5.3.1.
+
+#### NodeJS [Node](https://nodejs.org/dist/v18.16.0/) version 18.16.0.
+
+#### NPM [NPM](https://github.com/npm) version 9.8.1.
+
+#### NodeJS [Node](https://nodejs.org/dist/v18.16.0/) version 18.16.0.
+
+#### NPM [NPM](https://github.com/npm) version 9.8.1.
+
+#### Git [GIT](https://github.com/npm) version 2.41.0.
+
+#### GitHub [GitHub](https://github.com/)
+
+#### GitHub-Pages [GitHub-Pages](https://pages.github.com/)
+
+## Requerimientos para correr la app
+
+#### Instalar NodeJS para el Sistema Operativo a utilizar
+
+##### "window abrir cmd como administrador"
+
+```
+npm i -g @angular/cli
+```
+
+##### "linux ó MacOs"
+
+```
+sudo npm i -g @angular/cli
+```
+
+### Comandos a utilizar
+
+```
+git clone https://github.com/mapcsasystem/GifsApp.git
+cd GifsApp
+npm install
+npm start
+```
+
+### Comandos a utilizar
+
+#### Pagina web de la app [GitHub-Pages](https://pages.github.com/)
+
+El diseño web no es repositive
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.7.
 
