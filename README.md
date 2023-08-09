@@ -49,7 +49,7 @@ npm install
 npm start
 ```
 
-#### Pagina web de la app [Web](https://mapcsasystem.github.io/countryApp/)
+#### Pagina web de la app [Web Countries App](https://mapcsasystem.github.io/countryApp/)
 
 El diseño web repositive
 
