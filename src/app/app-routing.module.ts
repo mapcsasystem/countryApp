@@ -25,6 +25,10 @@ const routes: Routes = [
       import('./countries/countries.module').then((m) => m.CountriesModule),
   },
   {
+    path: '',
+    redirectTo: 'countries',
+  },
+  {
     path: '**',
     redirectTo: 'countries',
   },

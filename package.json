@@ -4,13 +4,10 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build -c production",
+    "build": "ng build -configuration=production && --base-href ./",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "build:href": "ng build -c production --base-href ./",
-    "build:github": "npm run delete:docs && npm run build:href && npm run copy:dist",
-    "delete:docs": "del docs",
-    "copy:dist": "copyfiles dist/country-app/* ./docs -f && copyfiles dist/country-app/assets/* ./docs/assets -f"
+    "build:href": "ng build -c production --base-href ./"
   },
   "private": true,
   "dependencies": {
