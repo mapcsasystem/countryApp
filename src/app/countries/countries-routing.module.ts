@@ -21,21 +21,12 @@ const routes: Routes = [
         path: 'by-region',
         component: ByRegionPageComponent,
       },
-      // {
-      //   path: 'by/:id',
-      //   component: CountryPageComponent,
-      // },
-      {
-        path: '',
-        redirectTo: 'by-capital',
-        pathMatch: 'full',
-      },
-      // {
-      //   path: '**',
-      //   redirectTo: 'countries/by-capital',
-      //   pathMatch: 'full',
-      // },
     ],
+  },
+  {
+    path: '**',
+    redirectTo: 'countries/by-capital',
+    pathMatch: 'full',
   },
 ];
 // {
