@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { NoFoundComponent } from './shared/components/no-found/no-found.component';
 //! Demostracion de router
 // import { HomePageComponent } from './shared/pages/home-page/home-page.component';
 // import { AboutPageComponent } from './shared/pages/about-page/about-page.component';
@@ -25,13 +26,17 @@ const routes: Routes = [
       import('./countries/countries.module').then((m) => m.CountriesModule),
   },
   {
+    path: '404',
+    component: NoFoundComponent,
+  },
+  {
     path: '',
-    redirectTo: 'countries',
+    redirectTo: '404',
     pathMatch: 'full',
   },
   {
     path: '**',
-    redirectTo: 'countries',
+    redirectTo: '404',
   },
 ];
 

@@ -7,6 +7,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { MaterialModule } from '../material/material.module';
 import { SearchBoxComponent } from './components/search-box/search-box.component';
+import { NoFoundComponent } from './components/no-found/no-found.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { SearchBoxComponent } from './components/search-box/search-box.component
     AboutPageComponent,
     ContactPageComponent,
     SearchBoxComponent,
+    NoFoundComponent,
   ],
   imports: [
     CommonModule,
@@ -26,6 +28,7 @@ import { SearchBoxComponent } from './components/search-box/search-box.component
     AboutPageComponent,
     ContactPageComponent,
     SearchBoxComponent,
+    NoFoundComponent,
   ],
 })
 export class SharedModule {}

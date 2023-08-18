@@ -4,6 +4,7 @@ import { ByCapitalPageComponent } from './pages/by-capital-page/by-capital-page.
 import { ByCountryPageComponent } from './pages/by-country-page/by-country-page.component';
 import { ByRegionPageComponent } from './pages/by-region-page/by-region-page.component';
 import { CountryPageComponent } from './pages/country-page/country-page.component';
+import { NoFoundComponent } from '../shared/components/no-found/no-found.component';
 const routes: Routes = [
   {
     path: 'by-capital',
@@ -22,19 +23,19 @@ const routes: Routes = [
     component: CountryPageComponent,
   },
   {
+    path: '404',
+    component: NoFoundComponent,
+  },
+  {
     path: '',
     redirectTo: 'by-capital',
     pathMatch: 'full',
   },
   {
     path: '**',
-    redirectTo: 'by-capital',
+    redirectTo: '404',
   },
 ];
-// {
-//   path: '**',
-//   redirectTo: 'countries/by-capital',
-// },
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
