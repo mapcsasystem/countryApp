@@ -6,35 +6,42 @@ import { ByRegionPageComponent } from './pages/by-region-page/by-region-page.com
 import { CountryPageComponent } from './pages/country-page/country-page.component';
 const routes: Routes = [
   {
-    path: 'by-capital',
+    path: '',
     component: ByCapitalPageComponent,
-  },
-  {
-    path: 'by-country',
-    component: ByCountryPageComponent,
-  },
-  {
-    path: 'by-region',
-    component: ByRegionPageComponent,
-  },
-  // {
-  //   path: 'by/:id',
-  //   component: CountryPageComponent,
-  // },
-  // {
-  //   path: '',
-  //   redirectTo: 'countries',
-  //   pathMatch: 'full',
-  // },
-  // {
-  //   path: '**',
-  //   redirectTo: 'countries',
-  // },
-  {
-    path: '**',
-    redirectTo: 'countries/by-capital',
+    children: [
+      {
+        path: 'by-capital',
+        component: ByCountryPageComponent,
+      },
+      {
+        path: 'by-country',
+        component: ByCountryPageComponent,
+      },
+      {
+        path: 'by-region',
+        component: ByRegionPageComponent,
+      },
+      // {
+      //   path: 'by/:id',
+      //   component: CountryPageComponent,
+      // },
+      {
+        path: '',
+        redirectTo: 'by-capital',
+        pathMatch: 'full',
+      },
+      // {
+      //   path: '**',
+      //   redirectTo: 'countries/by-capital',
+      //   pathMatch: 'full',
+      // },
+    ],
   },
 ];
+// {
+//   path: '**',
+//   redirectTo: 'countries/by-capital',
+// },
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
