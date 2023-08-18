@@ -12,6 +12,7 @@ import { SharedModule } from '../shared/shared.module';
 import { CountryTableComponent } from './components/country-table/country-table.component';
 import LocaleEs from '@angular/common/locales/es-MX';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
+import { RouterModule } from '@angular/router';
 
 registerLocaleData(LocaleEs, 'es-MX');
 
@@ -28,6 +29,7 @@ registerLocaleData(LocaleEs, 'es-MX');
     CountriesRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    RouterModule,
     MaterialModule,
     SharedModule,
   ],

@@ -5,6 +5,7 @@ import {
   OnInit,
   SimpleChanges,
   ViewChild,
+  inject,
 } from '@angular/core';
 import { ICountry } from '../../interfaces/country.interface';
 import { MatPaginator } from '@angular/material/paginator';
@@ -13,6 +14,7 @@ import {
   MatTableDataSourcePaginator,
 } from '@angular/material/table';
 import { MatSort } from '@angular/material/sort';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'countries-table',
@@ -23,6 +25,7 @@ export class CountryTableComponent implements OnInit, OnChanges {
   @Input({ required: true }) countries: ICountry[] = [];
   @ViewChild(MatPaginator, { static: true }) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
+  private _router = inject(Router);
 
   dataSource!: MatTableDataSource<ICountry, MatTableDataSourcePaginator>;
   displayedColumns = [
