@@ -31,7 +31,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '404',
+    redirectTo: 'countries',
     pathMatch: 'full',
   },
   {
