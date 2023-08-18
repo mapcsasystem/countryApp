@@ -22,9 +22,13 @@ const routes: Routes = [
         component: ByRegionPageComponent,
       },
       {
-        path: '**',
-        redirectTo: 'countries/by-capital',
+        path: '',
+        redirectTo: 'by-capital',
         pathMatch: 'full',
+      },
+      {
+        path: '**',
+        redirectTo: 'by-capital',
       },
     ],
   },

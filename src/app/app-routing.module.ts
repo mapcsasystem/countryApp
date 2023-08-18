@@ -26,12 +26,12 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'countries/by-capital',
+    redirectTo: 'countries',
     pathMatch: 'full',
   },
   {
     path: '**',
-    redirectTo: 'countries/by-capital',
+    redirectTo: 'countries',
   },
 ];
 
